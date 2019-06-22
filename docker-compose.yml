@@ -1,0 +1,8 @@
+version: '2'
+services:
+  soap-service:
+    build: .
+    command: bash -c "sleep 40 && rm -f tmp/pids/server.pid  && bundle exec rails s -p 3008 -b '0.0.0.0'"
+    ports:
+      - "3008:3008"
+    
