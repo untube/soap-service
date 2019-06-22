@@ -152,7 +152,7 @@ development:
 test:
   clients:
     default:
-      database: videos_db
+      mongodb: videos_db
       hosts:
         - localhost:27017
       options:
