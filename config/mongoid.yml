@@ -154,7 +154,7 @@ test:
     default:
       mongodb: videos_db
       hosts:
-        - localhost:27017
+        - mongodb:27017
       options:
         read:
           mode: :primary
