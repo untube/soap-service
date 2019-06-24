@@ -15,7 +15,7 @@ class WsvideosController < ApplicationController
         links = []
         images = []
         video_array = []
-        base_link = "http://untube/watch/"
+        base_link = "http://35.196.3.185:4200/watch/"
 
         videos.each do |video|
             
