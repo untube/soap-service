@@ -6,7 +6,7 @@ class WsvideosController < ApplicationController
     :args => { :title => :string},
     :return => {:titles => :string, :links => :string , :images => :string}
     #:return => {:videos => :videos}
-
+    #Que sirva esta mierda!!!!
     def findVideos
 
         @search = params[:title]
