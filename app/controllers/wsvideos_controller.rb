@@ -4,12 +4,12 @@ class WsvideosController < ApplicationController
     
     soap_action "findVideos",
     :args => { :title => :string},
-    #:return => {:titles => :string, :links => :string , :images => :string}
-    :return => {:videos => :videos}
+    :return => {:titles => :string, :links => :string , :images => :string}
+    #:return => {:videos => :videos}
 
     def findVideos
 
-        @searh = params[:title]
+        @search = params[:title]
         videos = Video.where(title: /.*#{@search}.*/i)
         title_strings = []
         links = []
@@ -35,8 +35,8 @@ class WsvideosController < ApplicationController
 
         end
 
-       # render :soap => { :titles => title_strings, :links => links, :images => images}
-        render :soap => { :videos => video_array}        
+       render :soap => { :titles => title_strings, :links => links, :images => images}
+       #render :soap => { :videos => video_array}        
         
     end
 end
