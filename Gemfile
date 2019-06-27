@@ -41,3 +41,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'mongoid', '~> 6.0'
 gem 'bson_ext'
 gem 'wash_out'
+gem 'savon'

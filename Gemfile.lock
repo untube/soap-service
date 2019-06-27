@@ -38,6 +38,9 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    akami (1.3.1)
+      gyoku (>= 0.4.0)
+      nokogiri
     arel (8.0.0)
     bson (4.5.0)
     bson_ext (1.5.1)
@@ -49,6 +52,11 @@ GEM
     ffi (1.11.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    gyoku (1.3.1)
+      builder (>= 2.1.2)
+    httpi (2.4.4)
+      rack
+      socksify
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     listen (3.1.5)
@@ -64,7 +72,7 @@ GEM
     mini_mime (1.0.1)
     mini_portile2 (2.4.0)
     minitest (5.11.3)
-    mongo (2.8.0)
+    mongo (2.9.0)
       bson (>= 4.4.2, < 5.0.0)
     mongoid (6.4.4)
       activemodel (>= 5.1, < 6.0.0)
@@ -105,10 +113,15 @@ GEM
     rb-inotify (0.10.0)
       ffi (~> 1.0)
     ruby_dep (1.5.0)
-    spring (2.1.0)
-    spring-watcher-listen (2.0.1)
-      listen (>= 2.7, < 4.0)
-      spring (>= 1.2, < 3.0)
+    savon (2.12.0)
+      akami (~> 1.2)
+      builder (>= 2.1.2)
+      gyoku (~> 1.2)
+      httpi (~> 2.3)
+      nokogiri (>= 1.8.1)
+      nori (~> 2.4)
+      wasabi (~> 3.4)
+    socksify (1.7.1)
     sprockets (3.7.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -120,6 +133,9 @@ GEM
     thread_safe (0.3.6)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
+    wasabi (3.5.0)
+      httpi (~> 2.0)
+      nokogiri (>= 1.4.2)
     wash_out (0.12.0)
       nori (>= 2.0.0)
     websocket-driver (0.6.5)
@@ -136,8 +152,7 @@ DEPENDENCIES
   mongoid (~> 6.0)
   puma (~> 3.7)
   rails (~> 5.1.7)
-  spring
-  spring-watcher-listen (~> 2.0.0)
+  savon
   tzinfo-data
   wash_out
 
