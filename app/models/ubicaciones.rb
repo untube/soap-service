@@ -10,7 +10,7 @@ class Ubicaciones
             data = response.body[:get_count_places_response]
             if data
                 @user = data[:user]
-                @countPlaces = data[:count_places=]
+                @countPlaces = data[:countPlaces]
                 @message = data[:message]
                 # puts @user
                 # puts @countPlaces
